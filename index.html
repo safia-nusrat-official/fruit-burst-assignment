@@ -1,35 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fruit Burst</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                clifford: '#da373d',
-              }
-            }
-          }
-        }
-      </script>
-    
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              darkPrimary: "#121212",
+              primary: "#F85559",
+              accentColor: "#F85559",
+            },
+          },
+        },
+      };
+    </script>
     <style>
-        .font-lato{
-            font-family: 'Lato';
-        }
+      .font-lato {
+        font-family: "Lato";
+      }
+      ::placeholder {
+        color: rgba(18, 18, 18, 0.4);
+      }
     </style>
-</head>
-<body class="font-lato">
-    <head></head>
+  </head>
+  <body class="font-lato">
+    <header class="lg:py-6 md:py-6 px-8 py-20 lg:px-20 md:px-20">
+      <nav
+        class="lg:bg-accentColor md:bg-accentColor flex justify-between rounded-full md:py-4 lg:py-4 md:px-8 lg:px-8 items-center lg:text-white md:text-white text-black"
+      >
+        <ul class="lg:flex md:flex gap-4 font-normal text-sm hidden">
+          <li><a href="">Home</a></li>
+          <li><a href="">About Us</a></li>
+          <li><a href="">Shop</a></li>
+          <li><a href="">All Fruits</a></li>
+        </ul>
+        <div class="logo-section flex items-center gap-2">
+          <img
+            src="images/logo.png"
+            alt="logo"
+            class="w-15 h-15 lg:w-10 lg:h-10 md:w-10 md:h-10"
+          />
+          <h2 class="lg:text-2xl md:text-2xl text-4xl font-semibold">
+            Fruit Burst
+          </h2>
+        </div>
+        <div
+          class="search-bar bg-white py-2 px-6 rounded-full items-center text-xs hidden lg:flex md:flex"
+        >
+          <input
+            type="text"
+            placeholder="Search here"
+            class="bg-transparent w-full outline-none text-darkPrimary"
+          />
+          <i class="fa-solid fa-magnifying-glass text-darkPrimary"></i>
+        </div>
+        <i class="fa-solid fa-bars text-4xl md:hidden"></i>
+      </nav>
+
+      <section class="mt-6">
+        <div
+          class="hero min-h-screen rounded-md relative overflow-hidden"
+          style="background-image: url(images/banner1.png)"
+        >
+          <div
+            class="bg-gradient-to-t from-darkPrimary/75 to-darkPrimary/25 w-full h-full"
+          ></div>
+          <!--swipe left button-->
+          <div
+            class="hero-container relative flex justify-center text-center items-center w-full"
+          >
+            <i
+              class="fa-solid fa-angle-left z-2 text-white bg-darkPrimary p-4 rounded-full absolute left-10"
+            ></i>
+            <div
+              class="hero-content z-1 text-center text-neutral-content relative top-0"
+            >
+              <div class="max-w-md text-white">
+                <h1 class="mb-5 text-5xl font-extrabold">
+                  Exotic tastes at your doorstep
+                </h1>
+                <p class="mb-5">We supply highly quality organic products</p>
+                <button
+                  class="btn btn-primary bg-accentColor border-none rounded-md hover:bg-[#d3484a] normal-case"
+                >
+                  Shop Now
+                </button>
+              </div>
+            </div>
+            <i
+              class="fa-solid fa-angle-right z-2 text-white bg-darkPrimary p-4 rounded-full absolute right-10"
+            ></i>
+          </div>
+        </div>
+        <div
+          class="wrapper z-5 bg-white hidden rounded-md relative -top-20 mx-20 py-4 px-8 shadow-lg justify-between lg:flex md:flex"
+        >
+          <div class="container flex flex-col justify-between items-center text-md"><img class="h-20" src="images/fruit1.png" alt="" /><span>Grapes</span></div>
+          <div class="container flex flex-col justify-between items-center text-md"><img class="h-20" src="images/fruit2.png" alt="" /><span>Orange</span></div>
+          <div class="container flex flex-col justify-between items-center text-md"><img class="h-20" src="images/fruit3.png" alt="" /><span>Mango</span></div>
+          <div class="container flex flex-col justify-between items-center text-md"><img class="h-20" src="images/fruit4.png" alt="" /><span>Strawberry</span></div>
+          <div class="container flex flex-col justify-between items-center text-md"><img class="h-20" src="images/fruit5.png" alt="" /><span>Pomegranate</span></div>
+        </div>
+      </section>
+    </header>
     <main></main>
     <footer></footer>
-</body>
+  </body>
 </html>
